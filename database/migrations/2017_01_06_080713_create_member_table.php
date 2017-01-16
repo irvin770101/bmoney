@@ -19,6 +19,7 @@ class CreateMemberTable extends Migration
             $table->string('account',255)->comment('帳號');
             $table->string('password',255)->comment('密碼');
             $table->string('email',255)->unique()->comment('電子信箱');
+            $table->unique('account');         
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateMemberTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('member');
     }
 }
