@@ -63,6 +63,15 @@ Route::group(['namespace' => 'Web'], function () {
         return redirect()->route('login');
     })->name('logout');
     
+    //寄信
+    Route::get('send_mail', function()
+    {
+        Mail::raw('測試使用 Laravel 5 的 Mailgun 寄信服務', function($message)
+        {
+            $message->to('chuang.f.c@gmail.com');
+        });
+    });
+    
  });
 
 //驗證登入    
@@ -72,6 +81,7 @@ Route::group(['middleware' => 'check.login'], function () {
     Route::get('/', function ()    {
         return view('welcome');
     });
+    
     //namespace Web
     Route::group(['namespace' => 'Web'], function () {
         
