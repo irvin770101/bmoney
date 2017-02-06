@@ -10,9 +10,6 @@
     @lang("web/register.email") <input type = "text" id = "email" name = "email" value="{{ old('email') }}">
     {{ $errors->first('email') }}
     <br>    
-    @lang("web/register.account") <input type = "text" id = "account" name = "account" value="{{ old('account') }}">
-    {{ $errors->first('account') }}
-    <br>
     @lang('web/register.password') <input type = "password" id = "password" name = "password"  >
     {{ $errors->first('password') }}
     <br>

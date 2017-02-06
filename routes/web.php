@@ -44,7 +44,7 @@ Route::group(['namespace' => 'Web'], function () {
     })->name('login');    
 
     //登入確認
-    Route::post('/login_check','MemberController@loginCheck');
+    Route::post('/login_check','MemberController@loginCheck')->name('loginCheck');
     
     //新註冊
     Route::get('/register',function()

@@ -23,8 +23,8 @@ class MemberController extends Controller
     {
 
         $account = $request->input('acc');     //帳號
-        $pssworld = $request->input('pss');  //密碼
-        $isLogin = $this->memberSer->checkLogin($account , $pssworld);
+        $passworld = $request->input('pss');  //密碼
+        $isLogin = $this->memberSer->checkLogin($account , $passworld);
         if($isLogin ===true)
         {
             return '登入成功'; 
@@ -36,6 +36,12 @@ class MemberController extends Controller
      * 註冊會員
      */
     public function registerSave(RegisterCheck $request){
+        $account = $request->input('account');  //帳號
+        $pssworld = $request->input('password');    //密碼
+        $nickName = $request->input('nickName');    //暱稱
+        $email = $request->input('email');  //電子信箱
+        
+        
         
     }
 }

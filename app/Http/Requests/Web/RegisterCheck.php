@@ -24,13 +24,10 @@ class RegisterCheck extends FormRequest
      */
     public function rules(Request $request)
     {
-        $checkPassworld = $request->input('checkPassworld');
-        $passworld = $request->input('passworld');
-
+   
         return [
-            'account' => 'required',
-            'password' => 'required|same:'.$checkPassworld,
-            'checkPassworld' => 'required|same:'.$passworld,
+            'password' => 'required',
+            'checkPassworld' => 'required|same:password',
             'nickName' => 'required',
             'email' => 'required|email' 
         ];
@@ -39,14 +36,12 @@ class RegisterCheck extends FormRequest
     public function messages()
     {
         return [
-            'account.required'    => trans('web/register.acc_required'),
             'password.required'    => trans('web/register.pss_required'),
             'checkPassworld.required'    => trans('web/register.pss_required'),
-            'password.same'    => trans('web/register.pss_different'),
-            'checkPassworld.same'    => trans('web/register.pss_different'),
             'nickName.required'    => trans('web/register.name_required'),
             'email.required'    => trans('web/register.email_required'),
             'email.email'    => trans('web/register.email_email'),
+            'checkPassworld.same'    => trans('web/register.pss_different'),
         ];
     }
 }

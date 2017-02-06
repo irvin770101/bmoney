@@ -13,7 +13,6 @@
         <input type = "submit" value="@lang('web/login.login')" >
         <input type = "button" value="@lang('web/login.logout')"  onclick = "window.location.href = '{{ route('logout') }}'">
         <br>
-
         <input type = "button" value="@lang('web/login.forget')" >
         <input type = "button" value="@lang('web/login.register')" onclick = "window.location.href = '{{ route('register') }}'">
 </form>

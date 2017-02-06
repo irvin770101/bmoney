@@ -5,7 +5,7 @@ return [
     'account' => '帳號',
     'password' => '密碼',
     'checkPassworld' => '確認密碼',
-    'email' => '電子信箱',
+    'email' => '電子信箱(帳號)',
     'acc_required' => '請輸入帳號',
     'pss_required' => '請輸入密碼',
     'pss_different' => '密碼不相同',
