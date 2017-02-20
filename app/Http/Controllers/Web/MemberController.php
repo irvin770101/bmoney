@@ -36,12 +36,10 @@ class MemberController extends Controller
      * 註冊會員
      */
     public function registerSave(RegisterCheck $request){
-        $account = $request->input('account');  //帳號
+        
+        $email = $request->input('email');  //電子信箱,(帳號)
         $pssworld = $request->input('password');    //密碼
         $nickName = $request->input('nickName');    //暱稱
-        $email = $request->input('email');  //電子信箱
-        
-        
         
     }
 }
